@@ -1,0 +1,30 @@
+match: {
+  value;
+}
+
+match: {
+  console.log(value);
+}
+
+match: {
+  let object = {
+    foo: "bar"
+  };
+}
+
+mismatch: {
+  fn(value);
+}
+
+mismatch: {
+  freeze(value);
+}
+
+mismatch: {
+  Object.keys(value);
+}
+
+mismatch: {
+  let Object;
+  Object.freeze(value);
+}
